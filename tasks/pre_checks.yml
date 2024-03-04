@@ -3,7 +3,7 @@
 - name: "[RabbitMQ] Test that variables are defined"
   assert:
     that:
-      - "{{ item }} is defined"
+      - 'item is defined'
   with_items:
     - rabbitmq_series
     - rabbitmq_series_rpm_version
@@ -63,8 +63,8 @@
 - name: "[RabbitMQ] Test that variables are not empty"
   assert:
     that:
-      - "{{ item }} != None"
-      - "{{ item }} | trim | length > 0"
+      - 'item != None'
+      - 'item | trim | length > 0'
   with_items:
     - rabbitmq_series
     - rabbitmq_rpm_repo_url
